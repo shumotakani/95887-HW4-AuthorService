@@ -29,7 +29,7 @@ public class SeedData {
         authorService.save(a3);
 
         
-        log.info("Quotes found with findAll():");
+        log.info("Authors found with findAll():");
         log.info("-------------------------------");
         for (Author m : authorService.findAll()) {
             log.info(m.toString());

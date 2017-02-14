@@ -1,4 +1,4 @@
-package edu.shuwang.model;
+ package edu.shuwang.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
