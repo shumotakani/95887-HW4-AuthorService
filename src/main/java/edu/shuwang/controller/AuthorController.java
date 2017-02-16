@@ -17,7 +17,7 @@ public class AuthorController {
 	private AuthorService authorService;
 	
 	@RequestMapping("/api/author/{id}")
-	public Author getAuthorById(@PathVariable int id) {
+	public Author getAuthorById(@PathVariable Long id) {
 		Author a = authorService.findById(id);
 		return a;
 	}
@@ -27,9 +27,9 @@ public class AuthorController {
 		return a;
 	}
 	@RequestMapping(value = "/api/author", method = RequestMethod.POST)
-	public Author saveAuthor(@RequestBody String name) {
-		Author a = new Author(name);
+	public Long saveAuthor(@RequestBody String authorName) {
+		Author a = new Author(authorName);
 		authorService.save(a);
-		return authorService.findByName(name);
+		return a.getId();
 	}
 }

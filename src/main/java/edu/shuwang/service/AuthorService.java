@@ -10,5 +10,5 @@ public interface AuthorService extends CrudRepository<Author, Long> {
 
     Author findByName(String name);
 
-    Author findById(Integer id);
+    Author findById(Long id);
 }
